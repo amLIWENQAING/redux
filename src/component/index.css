@@ -1,0 +1,12 @@
+.wrap{
+    width: 100%;   
+}
+.add{
+    float: right;
+}
+.wrap table{
+    width: 100%;
+}
+.wrap table td{
+    width: 25%;
+}
