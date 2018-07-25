@@ -27,11 +27,15 @@ class Wrap extends Component {
         );
     }
     componentDidMount() {
-        this.props.addToCart("bread 7003232g", 222, 90)
+        // this.props.addToCart("bread 7003232g", 222, 90)
     }
     addToCart(){
         let {addToCart} = this.props;
         addToCart&&addToCart("bread 7003232g", 222, 90)
+    }
+    deleteFromCart(product){
+        let {deleteFromCart} = this.props;
+        deleteFromCart&&deleteFromCart(product)
     }
     getList(data){
         return data.map((index, key) => {
@@ -39,7 +43,7 @@ class Wrap extends Component {
                     <td>{index.product}</td>
                     <td>{index.quantity}</td>
                     <td>{index.unitCost}</td>
-                    <td>{'删除'}</td>
+                    <td onClick={e=>this.deleteFromCart(index.product)}>{'删除'}</td>
                 </Tr>
             })
         
