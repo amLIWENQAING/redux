@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.2",
+    "css-loader": "^1.0.0",
     "highcharts": "^6.1.0",
     "highcharts-react-official": "^1.1.0",
     "prop-types": "^15.6.2",
@@ -16,13 +17,15 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "style-loader": "^0.21.0",
     "webpack": "^3.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "hot": "webpack-dev-server --progress ./config/webpack.config.js --watch --open"
   },
   "devDependencies": {
     "redux-devtools": "^3.4.1",
