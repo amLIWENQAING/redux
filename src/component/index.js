@@ -28,6 +28,8 @@ class Wrap extends Component {
     }
     componentDidMount() {
         // this.props.addToCart("bread 7003232g", 222, 90)
+        let {fetchPosts} = this.props;
+        fetchPosts&&fetchPosts(11)
     }
     addToCart(){
         let {addToCart} = this.props;
@@ -61,6 +63,7 @@ const mapDispatchToProps = (dispatch) => {
         addToCart: (...params) => dispatch(actions.addToCart(...params)),
         updateCart: (...params) => dispatch(actions.updateCart(...params)),
         deleteFromCart: (...params) => dispatch(actions.deleteFromCart(...params)),
+        fetchPosts: (...params) => dispatch(actions.fetchPosts(...params)),
     }
 };
 
